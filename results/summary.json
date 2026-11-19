@@ -1,0 +1,105 @@
+{
+  "vector-search-v1": {
+    "run": "vector-search-multi-20261117-004814",
+    "harness": "v1 hillclimb.py",
+    "task": "vector-search-multi",
+    "experiments": 5,
+    "abandoned": 0,
+    "kept": 5,
+    "hours": 0.71,
+    "cost_usd": 56.41,
+    "best_val": 163057.42245291566,
+    "reference_val": 86393.7534447252,
+    "best_test": 17705.73624603562,
+    "best_test_valid": true,
+    "reference_test": null,
+    "reference_test_valid": false,
+    "test_metrics": {
+      "min_recall_at_10": 0.9762,
+      "gist_recall_at_10": 0.9762
+    },
+    "reference_test_metrics": {
+      "min_recall_at_10": 0.907,
+      "gist_qps": 16526.1914,
+      "gist_recall_at_10": 0.907
+    }
+  },
+  "vector-search-v2": {
+    "run": "vector-search-multi-multi-20261117-052206",
+    "harness": "v2 hillclimb_multi.py",
+    "task": "vector-search-multi",
+    "experiments": 5,
+    "abandoned": 0,
+    "kept": 3,
+    "hours": 0.27,
+    "cost_usd": 17.13,
+    "best_val": 95453.2061925357,
+    "reference_val": 86393.7534447252,
+    "best_test": 12015.470598959935,
+    "best_test_valid": true,
+    "reference_test": null,
+    "reference_test_valid": false,
+    "test_metrics": {
+      "min_recall_at_10": 0.9908,
+      "gist_recall_at_10": 0.9908
+    },
+    "reference_test_metrics": {
+      "min_recall_at_10": 0.907,
+      "gist_qps": 19253.2774,
+      "gist_recall_at_10": 0.907
+    }
+  },
+  "vector-search-v3": {
+    "run": "vector-search-multi-agent-20261117-053848",
+    "harness": "v3 hillclimb_agent.py",
+    "task": "vector-search-multi",
+    "experiments": 5,
+    "abandoned": 1,
+    "kept": 3,
+    "hours": 0.56,
+    "cost_usd": 23.55,
+    "best_val": 151823.5235816601,
+    "reference_val": 86393.7534447252,
+    "best_test": 28176.90478937589,
+    "best_test_valid": true,
+    "reference_test": null,
+    "reference_test_valid": false,
+    "test_metrics": {
+      "min_recall_at_10": 0.9744,
+      "gist_recall_at_10": 0.9744
+    },
+    "reference_test_metrics": {
+      "min_recall_at_10": 0.907,
+      "gist_qps": 19011.9629,
+      "gist_recall_at_10": 0.907
+    }
+  },
+  "llm-inference-v3": {
+    "run": "llm-inference-agent-20261117-153745",
+    "harness": "v3 hillclimb_agent.py",
+    "task": "llm-inference",
+    "experiments": 5,
+    "abandoned": 0,
+    "kept": 2,
+    "hours": 1.08,
+    "cost_usd": 17.82,
+    "best_val": 46.33604176918618,
+    "reference_val": 46.56806276780046,
+    "best_test": 35.56185131681664,
+    "best_test_valid": true,
+    "reference_test": 38.68891187100015,
+    "reference_test_valid": true,
+    "test_metrics": {
+      "tokens_per_second_geomean": 34.3301,
+      "short_tokens_per_second": 50.8975,
+      "medium_tokens_per_second": 38.4458,
+      "long_tokens_per_second": 20.6767
+    },
+    "reference_test_metrics": {
+      "tokens_per_second_geomean": 38.2562,
+      "short_tokens_per_second": 52.1831,
+      "medium_tokens_per_second": 41.4807,
+      "long_tokens_per_second": 25.866
+    }
+  }
+}

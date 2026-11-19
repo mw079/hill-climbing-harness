@@ -1,0 +1,8 @@
+{
+  "model_dir": "model",
+  "top_k": 8,
+  "logprob_tolerance": 0.5,
+  "max_peak_memory_gb": 6.0,
+  "process_timeout_seconds": 900,
+  "verifier_tolerance": 0.5
+}

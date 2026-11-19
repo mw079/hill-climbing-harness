@@ -1,0 +1,12 @@
+{
+  "k": 10,
+  "recall_floor": 0.95,
+  "max_build_seconds": 20.0,
+  "max_rss_mb": 512.0,
+  "process_timeout_seconds": 45,
+  "min_search_seconds": 1.0,
+  "search_threads": 1,
+  "distance": "squared_l2",
+  "query_mode": "one_query_per_call",
+  "distance_tolerance": 1e-06
+}

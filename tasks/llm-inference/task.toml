@@ -1,0 +1,29 @@
+name = "llm-inference"
+direction = "maximize"
+
+[commands]
+test = "python3 test_engine.py {task}/model"
+evaluate = "python3 {task}/evaluator/evaluate.py --candidate {candidate} --split {split} --out {out}"
+
+[environment]
+python = "3.13"
+packages = ["mlx==0.32.4"]
+reference_packages = ["mlx-lm==0.32.2"]
+
+[workspace]
+editable = ["engine.py", "src/*", "test_engine.py"]
+
+[agent]
+web_search = false
+
+[eval]
+repetitions = 5
+min_improvement = 0.03
+timeout_s = 900
+
+[budget]
+max_experiments = 10
+max_hours = 4
+max_plan_revisions = 2
+max_fix_attempts = 2
+agent_step_timeout_s = 1200

@@ -1,0 +1,20 @@
+{
+  "ok": true,
+  "task": "llm-inference",
+  "state": "existing",
+  "baseline": "reference",
+  "scores": {
+    "train": 48.428101120600495,
+    "val": 48.0465056811583,
+    "test": 40.91828331425099
+  },
+  "target_val": 32.11854010601984,
+  "noise": 0.002864114494388612,
+  "threshold": 0.03,
+  "eval_seconds": 26.489,
+  "guard_baseline_valid": true,
+  "problems": [],
+  "warnings": [],
+  "task_hash": "af854cc38f8855b6",
+  "checked_at": "2026-11-17 22:07:56"
+}

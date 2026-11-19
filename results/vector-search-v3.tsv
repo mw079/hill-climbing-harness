@@ -1,0 +1,6 @@
+finished	exp	worker	parent	decision	kept	val_score	gain	pairs	title
+1	1	1	the start	keep	yes	86504.4		2	Experiment 1: [index-build] First valid engine: HNSW graph + NEON L2 + build-time ef calibration
+2	2	2	the start	discard	no	81957.1	-0.061	3	Experiment 2: [index-build] IVF + SQ8 (uint8 codes, NEON abs-diff/UDOT scan) + exact float rerank, b
+3	4	1	experiment 1	keep	yes	108209	+0.204	3	Experiment 4: [memory-layout] SQ8 code traversal over a BFS-renumbered contiguous level-0 graph + ex
+4	5	2	experiment 1	keep	no	98670.6	+0.109	2	Experiment 5: [index-build] Held-out-insertion ef calibration with integer binary search (replaces n
+5	6	1	experiment 4	keep	yes	151824	+0.432	2	Experiment 6: [merge] Held-out-insertion ef calibration (exp 5) on the SQ8 flat-graph pipeline (exp 

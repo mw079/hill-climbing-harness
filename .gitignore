@@ -1,0 +1,13 @@
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+*.py[cod]
+.DS_Store
+runs/
+.hillclimb/
+tasks/vector-search-multi/data/
+tasks/vector-search-multi/reference/vendor/
+tasks/llm-inference/model/
+tasks/llm-inference/data/

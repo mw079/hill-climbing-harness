@@ -1,0 +1,38 @@
+# One entry per coding agent. Select with:  python hillclimb.py run <task> --agent <name>
+#
+# command         the command line; it runs in the workspace directory.
+#                 {prompt} is replaced by the prompt, {harness} by the harness directory,
+#                 {python} by the Python interpreter running the harness.
+# resume          optional: arguments added to continue the previous session ({session}).
+#                 Without it every step is a fresh session, which also works.
+# session_key     optional: key of the session id in the agent's JSON output.
+# cost_key        optional: key of the cost in the agent's JSON output.
+# web_search_off  optional: arguments added when a task sets agent.web_search = false.
+# settings_arg    optional (hillclimb_multi / hillclimb_agent): arguments that pass a Claude Code
+#                 settings file ({settings}) hiding the hidden splits from worker sessions.
+
+# Uses Claude Code's default model. To pin one, add for example "--model", "claude-opus-5-5".
+[claude]
+command = ["claude", "-p", "{prompt}", "--output-format", "json", "--dangerously-skip-permissions"]
+resume = ["--resume", "{session}"]
+session_key = "session_id"
+cost_key = "total_cost_usd"
+web_search_off = ["--disallowedTools", "WebSearch,WebFetch"]
+settings_arg = ["--settings", "{settings}"]
+
+# Claude Code pinned to Opus 5.5 at medium effort, for reproducible runs.
+[claude-opus-medium]
+command = ["claude", "-p", "{prompt}", "--output-format", "json", "--dangerously-skip-permissions",
+           "--model", "claude-opus-5-5", "--effort", "medium"]
+resume = ["--resume", "{session}"]
+session_key = "session_id"
+cost_key = "total_cost_usd"
+web_search_off = ["--disallowedTools", "WebSearch,WebFetch"]
+settings_arg = ["--settings", "{settings}"]
+
+# Default agent. Flags verified against installed `cursor-agent --help`.
+# End-to-end runs and interruption/resume verified with CURSOR_API_KEY.
+[cursor]
+command = ["cursor-agent", "-p", "{prompt}", "--output-format", "json", "--force", "--trust"]
+resume = ["--resume", "{session}"]
+session_key = "session_id"

@@ -1,0 +1,3 @@
+engine
+*.o
+__pycache__/

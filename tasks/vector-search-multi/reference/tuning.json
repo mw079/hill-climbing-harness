@@ -1,0 +1,305 @@
+{
+  "selection_split": "train",
+  "train_datasets": [
+    "deep",
+    "sift"
+  ],
+  "selection_rule": "largest geometric-mean median QPS with recall floor met on every train dataset",
+  "timing_repetitions": 3,
+  "policy": {
+    "k": 10,
+    "recall_floor": 0.95,
+    "max_build_seconds": 20.0,
+    "max_rss_mb": 512.0,
+    "process_timeout_seconds": 45,
+    "min_search_seconds": 1.0,
+    "search_threads": 1,
+    "distance": "squared_l2",
+    "query_mode": "one_query_per_call",
+    "distance_tolerance": 1e-06
+  },
+  "machine": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+  "settings": [
+    {
+      "factory": "Flat",
+      "parameter": 0,
+      "qps_geomean": 11581.740407456104,
+      "min_recall_at_10": 1.0,
+      "datasets": {
+        "deep": {
+          "qps": 13086.817860224057,
+          "recall_at_10": 1.0,
+          "max_build_seconds": 0.001755083,
+          "max_rss_mb": 15.78125
+        },
+        "sift": {
+          "qps": 10249.757603289876,
+          "recall_at_10": 1.0,
+          "max_build_seconds": 0.001287333,
+          "max_rss_mb": 18.765625
+        }
+      }
+    },
+    {
+      "factory": "HNSW16",
+      "parameter": 32,
+      "qps_geomean": 86310.57108699968,
+      "min_recall_at_10": 0.9783203125,
+      "datasets": {
+        "deep": {
+          "qps": 92538.57473663318,
+          "recall_at_10": 0.9783203125,
+          "max_build_seconds": 0.481538292,
+          "max_rss_mb": 20.171875
+        },
+        "sift": {
+          "qps": 80501.72268770628,
+          "recall_at_10": 0.98046875,
+          "max_build_seconds": 0.485765625,
+          "max_rss_mb": 23.171875
+        }
+      }
+    },
+    {
+      "factory": "HNSW16",
+      "parameter": 64,
+      "qps_geomean": 47055.890851473974,
+      "min_recall_at_10": 0.9955078125,
+      "datasets": {
+        "deep": {
+          "qps": 48506.332748061475,
+          "recall_at_10": 0.9955078125,
+          "max_build_seconds": 0.471806792,
+          "max_rss_mb": 20.15625
+        },
+        "sift": {
+          "qps": 45648.82023397905,
+          "recall_at_10": 0.9966796875,
+          "max_build_seconds": 0.470189125,
+          "max_rss_mb": 23.171875
+        }
+      }
+    },
+    {
+      "factory": "HNSW16",
+      "parameter": 128,
+      "qps_geomean": 23028.703634510195,
+      "min_recall_at_10": 0.99921875,
+      "datasets": {
+        "deep": {
+          "qps": 23572.635300373226,
+          "recall_at_10": 0.9994140625,
+          "max_build_seconds": 0.471074458,
+          "max_rss_mb": 20.203125
+        },
+        "sift": {
+          "qps": 22497.32303276701,
+          "recall_at_10": 0.99921875,
+          "max_build_seconds": 0.451923292,
+          "max_rss_mb": 23.1875
+        }
+      }
+    },
+    {
+      "factory": "HNSW16",
+      "parameter": 256,
+      "qps_geomean": 10440.035383881606,
+      "min_recall_at_10": 0.999609375,
+      "datasets": {
+        "deep": {
+          "qps": 10506.075107151193,
+          "recall_at_10": 1.0,
+          "max_build_seconds": 0.474134417,
+          "max_rss_mb": 20.1875
+        },
+        "sift": {
+          "qps": 10374.410777104646,
+          "recall_at_10": 0.999609375,
+          "max_build_seconds": 0.450413875,
+          "max_rss_mb": 23.15625
+        }
+      }
+    },
+    {
+      "factory": "HNSW32",
+      "parameter": 32,
+      "qps_geomean": 79067.48872439633,
+      "min_recall_at_10": 0.98046875,
+      "datasets": {
+        "deep": {
+          "qps": 81299.20134380164,
+          "recall_at_10": 0.98046875,
+          "max_build_seconds": 0.517553542,
+          "max_rss_mb": 21.6875
+        },
+        "sift": {
+          "qps": 76897.03797636589,
+          "recall_at_10": 0.985546875,
+          "max_build_seconds": 0.455633958,
+          "max_rss_mb": 24.65625
+        }
+      }
+    },
+    {
+      "factory": "HNSW32",
+      "parameter": 64,
+      "qps_geomean": 42458.59312416758,
+      "min_recall_at_10": 0.996875,
+      "datasets": {
+        "deep": {
+          "qps": 44183.72042072436,
+          "recall_at_10": 0.996875,
+          "max_build_seconds": 0.508171708,
+          "max_rss_mb": 21.71875
+        },
+        "sift": {
+          "qps": 40800.822405123756,
+          "recall_at_10": 0.9974609375,
+          "max_build_seconds": 0.4468755,
+          "max_rss_mb": 24.671875
+        }
+      }
+    },
+    {
+      "factory": "HNSW32",
+      "parameter": 128,
+      "qps_geomean": 21694.213316317328,
+      "min_recall_at_10": 0.999609375,
+      "datasets": {
+        "deep": {
+          "qps": 21901.550709075884,
+          "recall_at_10": 0.9998046875,
+          "max_build_seconds": 0.48180775,
+          "max_rss_mb": 21.71875
+        },
+        "sift": {
+          "qps": 21488.838743224263,
+          "recall_at_10": 0.999609375,
+          "max_build_seconds": 0.477563166,
+          "max_rss_mb": 24.65625
+        }
+      }
+    },
+    {
+      "factory": "HNSW32",
+      "parameter": 256,
+      "qps_geomean": 9684.831654695206,
+      "min_recall_at_10": 0.9998046875,
+      "datasets": {
+        "deep": {
+          "qps": 9690.001067792697,
+          "recall_at_10": 0.9998046875,
+          "max_build_seconds": 0.483045875,
+          "max_rss_mb": 21.703125
+        },
+        "sift": {
+          "qps": 9679.66499937157,
+          "recall_at_10": 1.0,
+          "max_build_seconds": 0.450177959,
+          "max_rss_mb": 24.65625
+        }
+      }
+    },
+    {
+      "factory": "IVF64,Flat",
+      "parameter": 8,
+      "qps_geomean": 69844.84873264928,
+      "min_recall_at_10": 0.946875,
+      "datasets": {
+        "deep": {
+          "qps": 79633.48116016123,
+          "recall_at_10": 0.946875,
+          "max_build_seconds": 0.012282833,
+          "max_rss_mb": 21.4375
+        },
+        "sift": {
+          "qps": 61259.445441990414,
+          "recall_at_10": 0.96796875,
+          "max_build_seconds": 0.013946791,
+          "max_rss_mb": 25
+        }
+      }
+    },
+    {
+      "factory": "IVF64,Flat",
+      "parameter": 16,
+      "qps_geomean": 38630.83279013376,
+      "min_recall_at_10": 0.9849609375,
+      "datasets": {
+        "deep": {
+          "qps": 44433.02851129304,
+          "recall_at_10": 0.9849609375,
+          "max_build_seconds": 0.012657,
+          "max_rss_mb": 21.5
+        },
+        "sift": {
+          "qps": 33586.30487408677,
+          "recall_at_10": 0.998046875,
+          "max_build_seconds": 0.014061167,
+          "max_rss_mb": 25
+        }
+      }
+    },
+    {
+      "factory": "IVF64,Flat",
+      "parameter": 32,
+      "qps_geomean": 21130.174254606693,
+      "min_recall_at_10": 0.9978515625,
+      "datasets": {
+        "deep": {
+          "qps": 23845.60998098911,
+          "recall_at_10": 0.9978515625,
+          "max_build_seconds": 0.012379875,
+          "max_rss_mb": 21.484375
+        },
+        "sift": {
+          "qps": 18723.960694903668,
+          "recall_at_10": 1.0,
+          "max_build_seconds": 0.014087625,
+          "max_rss_mb": 25.015625
+        }
+      }
+    },
+    {
+      "factory": "IVF64,Flat",
+      "parameter": 64,
+      "qps_geomean": 10583.641122759753,
+      "min_recall_at_10": 1.0,
+      "datasets": {
+        "deep": {
+          "qps": 12037.221534043887,
+          "recall_at_10": 1.0,
+          "max_build_seconds": 0.0126435,
+          "max_rss_mb": 21.453125
+        },
+        "sift": {
+          "qps": 9305.59092051045,
+          "recall_at_10": 1.0,
+          "max_build_seconds": 0.013872333,
+          "max_rss_mb": 25
+        }
+      }
+    }
+  ],
+  "selected": {
+    "factory": "HNSW16",
+    "parameter": 32,
+    "qps_geomean": 86310.57108699968,
+    "min_recall_at_10": 0.9783203125,
+    "datasets": {
+      "deep": {
+        "qps": 92538.57473663318,
+        "recall_at_10": 0.9783203125,
+        "max_build_seconds": 0.481538292,
+        "max_rss_mb": 20.171875
+      },
+      "sift": {
+        "qps": 80501.72268770628,
+        "recall_at_10": 0.98046875,
+        "max_build_seconds": 0.485765625,
+        "max_rss_mb": 23.171875
+      }
+    }
+  },
+  "scope": "best tested setting in this finite catalog, not all possible FAISS indexes"
+}

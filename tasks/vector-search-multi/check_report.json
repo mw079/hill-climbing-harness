@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "task": "vector-search-multi",
+  "state": "scratch",
+  "baseline": "reference",
+  "scores": {
+    "train": 92278.18977981048,
+    "val": 90516.47416275673,
+    "test": null
+  },
+  "target_val": null,
+  "noise": 0.01680978080030004,
+  "threshold": 0.03361956160060008,
+  "eval_seconds": 3.787,
+  "guard_baseline_valid": true,
+  "problems": [],
+  "warnings": [
+    "reference is not valid on test: recall@10 is below the required floor on 1 of 1 dataset(s)"
+  ],
+  "task_hash": "841711ceae7da377",
+  "checked_at": "2026-11-17 22:02:24"
+}

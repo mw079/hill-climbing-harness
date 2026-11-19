@@ -1,0 +1,6 @@
+finished	exp	worker	parent	decision	kept	val_score	gain	pairs	title
+1	1	1	the start	keep	yes	41.6309	+0.323	2	Experiment 1: [gdn-kernel] Fused Metal kernel for the gated delta rule recurrence (prefill + decode)
+2	2	2	the start	discard	no	34.5628	-0.151	2	Experiment 2: [decode-loop] Async-pipelined decode with on-device token and stepped KV cache
+3	3	3	the start	discard	no	32.4062	-0.207	2	Experiment 3: [graph-fusion] Concatenated projection weights + mx.compile'd elementwise blocks
+4	4	1	experiment 1	keep	yes	46.336	+0.129	2	Experiment 4: [merge] Pipelined, fused and compiled decode step on top of the GDN Metal kernel
+5	5	1	experiment 4	discard	no	46.4185	-0.028	5	Experiment 5: [long-context] Copy-free KV buffer, latency-hidden GDN kernel and chunked prefill, wit

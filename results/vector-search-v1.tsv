@@ -1,0 +1,6 @@
+finished	exp	worker	parent	decision	kept	val_score	gain	pairs	title
+1	1	-	-	keep	yes	12786.4			Experiment 1: Exact NEON brute-force scan with a bounded top-k (first valid engine)
+2	2	-	-	keep	yes	71999	+4.525		Experiment 2: IVF (k-means partitions) with nprobe derived at build time from self-recall
+3	3	-	-	keep	yes	128231	+0.744		Experiment 3: SQ8 (uint8, shared scale) IVF scan with UDOT + threshold filter + exact float rerank
+4	4	-	-	keep	yes	150917	+0.167		Experiment 4: Probe clusters nearest-first and select them with packed integer keys
+5	5	-	-	keep	yes	163057	+0.078		Experiment 5: Choose nlist at build time by a calibrated cost model instead of fixed 2·√n

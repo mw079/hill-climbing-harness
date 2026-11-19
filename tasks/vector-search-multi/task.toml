@@ -1,0 +1,29 @@
+name = "vector-search-multi"
+direction = "maximize"
+
+[commands]
+build = "make"
+test = "python3 -m unittest -q test_engine"
+evaluate = "python3 {task}/evaluator/evaluate.py --candidate {candidate} --split {split} --out {out}"
+
+[environment]
+python = "3.13"
+packages = ["numpy==2.2.6"]
+
+[workspace]
+editable = ["engine.h", "src/*", "test_engine.py"]
+
+[agent]
+web_search = false
+
+[eval]
+repetitions = 5
+min_improvement = 0.03
+timeout_s = 180
+
+[budget]
+max_experiments = 10
+max_hours = 3
+max_plan_revisions = 2
+max_fix_attempts = 2
+agent_step_timeout_s = 600

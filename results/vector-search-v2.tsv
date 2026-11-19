@@ -1,0 +1,6 @@
+finished	exp	worker	parent	decision	kept	val_score	gain	pairs	title
+1	1	1	the start	keep	yes	12838.7		2	Experiment 1: [search-loop] Exact NEON brute-force scan as first valid engine
+2	2	2	the start	keep	yes	62103	+3.767	2	Experiment 2: [index-build] HNSW graph index with build-time self-calibrated search breadth
+3	3	3	the start	keep	yes	95453.2	+0.531	2	Experiment 3: [ivf-quant] IVF k-means partitions + uint8 SQ codes scanned with NEON, exact float rer
+4	5	2	experiment 2	discard	no	84003	-0.120	4	Experiment 5: [search-loop] Heap-free batched HNSW layer-0 search (overhead, not distances, dominate
+5	4	1	experiment 1	discard	no	82003	-0.141	3	"Experiment 4: [quant-scan] Full-scan 4-bit PQ ""fast-scan"" (NEON vqtbl LUTs) + build-calibrated exact"
